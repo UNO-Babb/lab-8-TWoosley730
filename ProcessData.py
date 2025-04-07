@@ -16,11 +16,12 @@ def main():
     first = data[0]
     last = data[1]
     idNum = data[3]
-    Year = data[5]
+    year = data[5]
     major = data[6]
     data = line.split()
-    student_id = makeID(data[0], data[1], data[3], data[5])
-    outFile.write()
+    student_id = makeID(first, last, idNum, year, major)
+    output = last + "," + first + "," + student_id + "," + major + "-" + year
+    outFile.write(output)
     print(student_id)
 
 
