@@ -14,7 +14,7 @@ def main():
   #Process each line of the input file and output to the CSV file
   for line in inFile:
     data = line.split()
-    student_id = makeID(data[0], data[1], data[3])
+    student_id = makeID(data[0], data[1], data[3], data[5])
     print(student_id)
 
 
@@ -22,7 +22,7 @@ def main():
   inFile.close()
   outFile.close()
 
-def makeID(first, last, idNum):
+def makeID(first, last, idNum, year):
   
   idLen = len(idNum)
   while len(last) < 5:
